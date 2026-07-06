@@ -7,6 +7,9 @@ extension ScopeBuilderExtension on ScopeBuilder {
     ProviderInstanceFactory<T> factory, {
     String? key,
   }) {
-    provide((scope) => ScopeAnchor(scope: scope, child: factory(scope)));
+    provide(
+      (scope) => ScopeAnchor(scope: scope, child: factory(scope)),
+      key: key,
+    );
   }
 }
