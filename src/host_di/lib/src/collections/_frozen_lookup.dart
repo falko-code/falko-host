@@ -19,7 +19,7 @@ final class FrozenLookup<TKey extends Object, TValue extends Object> {
     }
 
     _slotMask = capacity - 1; // fast modulo via bitwise AND
-    _fingerprints = Int32List(capacity);
+    _fingerprints = Int64List(capacity);
 
     _keys = List.filled(capacity, null);
     _values = List.filled(capacity, null);
