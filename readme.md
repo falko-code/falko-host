@@ -13,7 +13,7 @@
 
 </div>
 
-Isolated Host Infrastructure for Dart and Flutter
+Isolated host infrastructure for dart and flutter.
 
 # <img src="Sticker128.png" width="25" hspace="5" /> Example
 
