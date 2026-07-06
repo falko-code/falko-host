@@ -33,24 +33,23 @@ final class const ServicesModule() extends Module {
   @override
   void initialize(ScopeBuilder builder) {
     builder
-      ..provide((scope) => MyService(scope.resolve<HostLifetime>(key: 'host:lifetime')!.stop))
+      ..provide((scope) => MyService())
       ..initialize((scope) => scope.resolve<MyService>()!)
       ..dispose((scope) => scope.resolve<MyService>()!);
   }
 }
 
-final class MyService(this.shutdown) implements Initializeable, Disposable {
-  final Function shutdown;
-
+final class MyService implements Initializeable, Disposable {
   @override
-  Future<void>? initialize() async {
+  Future<void>? initialize() {
     print('Service initialized');
-    Future.delayed(const Duration(seconds: 5), () => shutdown());
+    return null;
   }
 
   @override
-  Future<void>? dispose() async {
+  Future<void>? dispose() {
     print('Service disposed');
+    return null;
   }
 }
 ```
