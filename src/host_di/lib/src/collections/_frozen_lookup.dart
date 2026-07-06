@@ -43,7 +43,7 @@ final class FrozenLookup<TKey extends Object, TValue extends Object> {
   static const _oddBit = 1; // force fingerprint odd; 0 then means "empty slot"
 
   late final int _slotMask;
-  late final Int32List _fingerprints;
+  late final Int64List _fingerprints;
   late final List<TKey?> _keys;
   late final List<TValue?> _values;
 
