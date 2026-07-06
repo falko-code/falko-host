@@ -57,33 +57,66 @@ final class MyService implements Initializeable, Disposable {
 ### Flutter
 
 ```dart
-Future<void> main() {
+Future<void>? main() {
   final builder = const FlutterHostFactory().create(
-    run: (scope) => scope.wresolve<App>()!,
+    run: (scope) => scope.resolve(key: 'initial')!,
   );
-  builder.wprovide((scope) => const App());
-  builder.wprovide((scope) => const HelloPage());
+
+  builder.provide((scope) => 'Incrementer', key: 'title');
+
+  builder.wprovide((scope) => const IncrementerApp());
+  builder.provide((scope) => scope.wresolve<IncrementerApp>()!, key: 'initial');
+
+  builder.wprovide((scope) => const IncrementPage());
+  builder.provide((scope) => IncrementNotifier());
+
   return builder.build().run();
 }
 
-final class const App({super.key}) extends StatelessWidget {
+final class const IncrementerApp({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: scope(context).wresolve<HelloPage>()!,
+      title: scope(context).resolve(key: 'title')!,
+      home: scope(context).wresolve<IncrementPage>()!,
     );
   }
 }
 
-final class const HelloPage({super.key}) extends StatelessWidget {
+final class const IncrementPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final incrementer = scope(context).resolve<IncrementNotifier>()!;
+    return Scaffold(
+      appBar: AppBar(title: Text(scope(context).resolve(key: 'title')!)),
       body: Center(
-        child: Text('Hello World'),
+        child: Column(
+          mainAxisAlignment: .center,
+          children: [
+            const Text('You have pushed the button this many times:'),
+            ValueListenableBuilder(
+              valueListenable: incrementer,
+              builder: (context, value, child) => Text(
+                '$value',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: incrementer.increment,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
       ),
     );
   }
+}
+
+final class IncrementNotifier() extends ValueNotifier<int> {
+  this : super(0);
+
+  void increment() => value++;
 }
 ```
 
