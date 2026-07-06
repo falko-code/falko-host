@@ -80,7 +80,7 @@ final class FrozenScopeAssembler(this._operations, this._modules) {
       final globalModuleKey = operation.source!.name + operation.key;
       for (final module in _modules) {
         _addProviderByKey(
-          module: operation.source,
+          module: module,
           key: globalModuleKey,
           provider: operation.provider,
         );
