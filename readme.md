@@ -65,7 +65,7 @@ Future<void>? main() {
   builder.provide((scope) => 'Incrementer', key: 'title');
 
   builder.wprovide((scope) => const IncrementerApp());
-  builder.provide((scope) => scope.wresolve<IncrementerApp>()!, key: 'initial');
+  builder.provide((scope) => scope.wresolve<IncrementerApp>()!, key: 'initial', cache: false);
 
   builder.wprovide((scope) => const IncrementPage());
   builder.provide((scope) => IncrementNotifier());
