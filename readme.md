@@ -5,7 +5,7 @@
 
 #
 
-### **ISOLATED DART HOST**
+### **ISOLATED HOST**
 
 <img src="Sticker512.png" width="128"/>
 
