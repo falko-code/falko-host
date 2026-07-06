@@ -33,7 +33,7 @@ final class const ServicesModule() extends Module {
   @override
   void initialize(ScopeBuilder builder) {
     builder
-      ..provide((scope) => MyService(scope.resolve(key: 'lifetime:shutdown')!))
+      ..provide((scope) => MyService(scope.resolve<HostLifetime>(key: 'host:lifetime')!.stop))
       ..initialize((scope) => scope.resolve<MyService>()!)
       ..dispose((scope) => scope.resolve<MyService>()!);
   }
