@@ -1,0 +1,10 @@
+index_generator:
+  libraries:
+    - directory_path: lib/src
+      file_name: src
+      include_library: false
+    - directory_path: lib
+      include_library: true
+      exclude:
+        - "{_,**/_}*.dart"
+        - "lib/src.dart"

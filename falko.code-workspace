@@ -1,0 +1,91 @@
+{
+	"folders": [
+		{
+			"name": "lints",
+			"path": "src/host_lints/lib"
+		},
+		{
+			"name": "di",
+			"path": "src/host_di/lib/src"
+		},
+		{
+			"name": "host",
+			"path": "src/host/lib/src"
+		},
+		{
+			"name": "host_flutter",
+			"path": "src/host_flutter/lib/src"
+		},
+		{
+			"name": "examples/di",
+			"path": "src/di/example"
+		},
+		{
+			"name": "examples/host",
+			"path": "src/host/example"
+		},
+		{
+			"name": "examples/host_flutter",
+			"path": "src/host_flutter/example"
+		},
+		{
+			"name": "tests/di",
+			"path": "src/di/test"
+		},
+		{
+			"name": "tests/host",
+			"path": "src/host/test"
+		},
+		{
+			"name": "tests/host_flutter",
+			"path": "src/host_flutter/test"
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"files.exclude": {
+			"**/android": true,
+			"**/windows": true,
+			"**/ios": true,
+			"**/macos": true,
+			"**/web": true,
+			"**/linux": true,
+			"**/*.iml": true,
+			"**/.metadata": true,
+			"**/*.lock": true,
+			"**/src.dart": true,
+			"**/.dart_tool": true,
+			"**/.flutter-plugins": true,
+			"**/.flutter-plugins-dependencies": true,
+			"**/.packages": true,
+			"**/.pub": true,
+			"**/build": true,
+			"**/.melos": true,
+			"**/.idea": true,
+			"**/*.g.dart": true,
+			"**/*.freezed.dart": true
+		},
+		"search.exclude": {
+			"**/android": true,
+			"**/windows": true,
+			"**/ios": true,
+			"**/macos": true,
+			"**/web": true,
+			"**/linux": true,
+			"**/*.iml": true,
+			"**/.metadata": true,
+			"**/*.lock": true,
+			"**/.dart_tool": true,
+			"**/build": true,
+			"**/*.g.dart": true,
+			"**/*.freezed.dart": true,
+			"**/Pods": true
+		},
+		"dart.analysisExcludedFolders": [
+			"build"
+		],
+		"dart.runPubGetOnNestedProjects": "both",
+		"dart.projectSearchDepth": 5,
+		"discord.enabled": true
+	}
+}
