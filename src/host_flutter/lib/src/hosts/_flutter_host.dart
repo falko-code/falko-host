@@ -13,7 +13,7 @@ final class FlutterHost({required this._scope}) implements Host {
 
   @override
   Future<void> run() async {
-    final lifetime = _scope.resolve<HostLifetime>(key: 'lifetime:service')!;
+    final lifetime = _scope.resolve<HostLifetime>(key: 'host:lifetime')!;
     await lifetime.initialize();
     try {
       await lifetime.start();
