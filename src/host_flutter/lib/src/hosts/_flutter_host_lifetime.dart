@@ -1,7 +1,7 @@
-import 'package:host_di/host_di.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:host/host.dart';
+import 'package:host_di/host_di.dart';
 
 @internal
 final class FlutterHostLifetime({required this._scope, required this._run})

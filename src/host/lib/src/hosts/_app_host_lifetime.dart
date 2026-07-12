@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:isolate';
 
-import 'package:host_di/host_di.dart';
 import 'package:host/src/src.dart';
+import 'package:host_di/host_di.dart';
 import 'package:meta/meta.dart';
 
 @internal

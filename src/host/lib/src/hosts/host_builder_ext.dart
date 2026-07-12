@@ -1,5 +1,5 @@
-import 'package:host_di/host_di.dart';
 import 'package:host/src/src.dart';
+import 'package:host_di/host_di.dart';
 
 extension HostBuilderExtension on ScopeBuilder {
   void dispose<T>(ProviderInstanceFactory<Disposable> factory) {

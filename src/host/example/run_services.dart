@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
-import 'package:host_di/host_di.dart';
 import 'package:host/host.dart';
+import 'package:host_di/host_di.dart';
 
 Future<void> main() {
   final builder = const AppHostFactory().create()

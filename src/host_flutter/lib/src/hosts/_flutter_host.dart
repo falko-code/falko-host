@@ -1,6 +1,6 @@
-import 'package:host_di/host_di.dart';
 import 'package:flutter/foundation.dart';
 import 'package:host/host.dart';
+import 'package:host_di/host_di.dart';
 
 @internal
 final class FlutterHost({required this._scope}) implements Host {

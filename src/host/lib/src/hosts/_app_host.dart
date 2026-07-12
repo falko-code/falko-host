@@ -1,10 +1,10 @@
-import 'package:host_di/host_di.dart';
 import 'package:host/src/src.dart';
+import 'package:host_di/host_di.dart';
 import 'package:meta/meta.dart';
 
 @internal
 final class AppHost extends Host {
-  AppHost(this._scope);
+  new(this._scope);
 
   final Scope _scope;
 

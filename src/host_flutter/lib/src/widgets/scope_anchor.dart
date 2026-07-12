@@ -1,5 +1,5 @@
-import 'package:host_di/host_di.dart';
 import 'package:flutter/material.dart';
+import 'package:host_di/host_di.dart';
 
 final class const ScopeAnchor({
   required super.child,
